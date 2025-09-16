@@ -27,3 +27,11 @@ private:
     {
         out << courseName << "," << grade << endl;
     }
+    tatic Course fromLine(const string &line)
+    {
+        size_t pos = line.find(",");
+        string c = line.substr(0, pos);
+        float g = stof(line.substr(pos + 1));
+        return Course(c, g);
+    }
+};
