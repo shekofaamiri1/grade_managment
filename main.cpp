@@ -23,3 +23,7 @@ private:
     {
         cout << "درس: " << courseName << " | نمره: " << grade << endl;
     }
+    void saveToFile(ofstream &out) const
+    {
+        out << courseName << "," << grade << endl;
+    }
