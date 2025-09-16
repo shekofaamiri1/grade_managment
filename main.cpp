@@ -19,3 +19,7 @@ private:
         cout << "نمره: ";
         cin >> grade;
     }
+    void display() const
+    {
+        cout << "درس: " << courseName << " | نمره: " << grade << endl;
+    }
