@@ -8,7 +8,8 @@ class Course
 private:
     string courseName;
     float grade;
-    public:
+
+public:
     Course() {}
     Course(string c, float g) : courseName(c), grade(g) {}
     void input()
@@ -27,7 +28,7 @@ private:
     {
         out << courseName << "," << grade << endl;
     }
-    tatic Course fromLine(const string &line)
+    static Course fromLine(const string &line)
     {
         size_t pos = line.find(",");
         string c = line.substr(0, pos);
@@ -35,3 +36,7 @@ private:
         return Course(c, g);
     }
 };
+int main()
+{
+    vector<Course> courses;
+    int choice;
