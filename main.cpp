@@ -50,3 +50,9 @@ int main()
         cout << "0. خروج\n";
         cout << "انتخاب: ";
         cin >> choice;
+        if (choice == 1)
+        {
+            Course c;
+            c.input();
+            courses.push_back(c);
+        }
