@@ -56,3 +56,9 @@ int main()
             c.input();
             courses.push_back(c);
         }
+        if (choice == 1)
+        {
+            Course c;
+            c.input();
+            courses.push_back(c);
+        }  
