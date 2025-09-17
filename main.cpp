@@ -69,3 +69,21 @@ int main()
             fout.close();
             cout << "نمرات ذخیره شدند!\n";
         }
+        else if (choice == 4)
+        {
+            courses.clear();
+            ifstream fin("grades.txt");
+            string line;
+            while (getline(fin, line))
+            {
+                if (!line.empty())
+                    courses.push_back(Course::fromLine(line));
+            }
+            fin.close();
+            cout << "نمرات از فایل خوانده شدند!\n";
+        }
+
+    } while (choice != 0);
+
+    return 0;
+}
