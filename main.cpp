@@ -40,3 +40,13 @@ int main()
 {
     vector<Course> courses;
     int choice;
+    do
+    {
+        cout << "\n--- سیستم مدیریت نمرات ---\n";
+        cout << "1. افزودن درس\n";
+        cout << "2. نمایش نمرات\n";
+        cout << "3. ذخیره در فایل\n";
+        cout << "4. خواندن از فایل\n";
+        cout << "0. خروج\n";
+        cout << "انتخاب: ";
+        cin >> choice;
