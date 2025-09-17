@@ -56,9 +56,16 @@ int main()
             c.input();
             courses.push_back(c);
         }
-        if (choice == 1)
+          else if (choice == 2)
         {
-            Course c;
-            c.input();
-            courses.push_back(c);
-        }  
+            for (const auto &c : courses)
+                c.display();
+        }
+         else if (choice == 3)
+        {
+            ofstream fout("grades.txt");
+            for (const auto &c : courses)
+                c.saveToFile(fout);
+            fout.close();
+            cout << "نمرات ذخیره شدند!\n";
+        }
